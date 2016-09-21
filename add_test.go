@@ -25,10 +25,10 @@ var _ = Describe("Add", func() {
 
 	})
 
-	Context("When passed 70 as a string", func() {
+	Context("When passed '1,2' as a string", func() {
 
-		It("should return 70 as a number", func() {
-			Expect(Add("70")).To(Equal(70))
+		It("should return 3 as a number", func() {
+			Expect(Add("1,2")).To(Equal(3))
 		})
 
 	})
