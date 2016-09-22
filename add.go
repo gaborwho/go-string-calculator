@@ -6,16 +6,16 @@ import (
 )
 
 func Add(numbers string) int {
-	stringNumberArray := Split(numbers)
-	integerNumbers := Parse(stringNumberArray)
-	return Sum(integerNumbers)
+	stringNumberArray := split(numbers)
+	integerNumbers := parse(stringNumberArray)
+	return sum(integerNumbers)
 }
 
-func Split(numbers string) []string {
+func split(numbers string) []string {
 	return strings.Split(numbers, ",")
 }
 
-func Parse(numbers []string) []int {
+func parse(numbers []string) []int {
 	integerNumbers := make([]int, len(numbers))
 
 	for i, numberString := range numbers {
@@ -25,7 +25,7 @@ func Parse(numbers []string) []int {
 	return integerNumbers
 }
 
-func Sum(numbers []int) int {
+func sum(numbers []int) int {
 	if len(numbers) > 1 {
 		return numbers[0] + numbers[1]
 	}
